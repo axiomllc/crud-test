@@ -24,6 +24,7 @@ class CrudRequest implements MiddlewareInterface
             'customization.beforeHandler' => function ($operation, $tableName, $request, $environment) {
 
               $body = $request->getBody();
+              $body->rewind();
               var_dump($body->getContents());
 
                 //var_dump($request);
